@@ -59,6 +59,8 @@ main .content__join .join__header {
 main .content__join .join__subheader {
   color: var(--Bright-Yellow);
   margin-top: 2rem;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 main .content__join .join__desc {
