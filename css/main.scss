@@ -77,6 +77,8 @@ main {
         border-radius: 0 0 0 10px;
 
         .subs__header {
+            font-size: 1.2em;
+            font-weight: 700;
         }
 
         .subs__price {
@@ -117,6 +119,11 @@ main {
         padding: 2.5rem;
         color: white;
         border-radius: 0 0 10px 0;
+
+        .why__header {
+            font-size: 1.2em;
+            font-weight: 700;
+        }
 
         .why__desc {
             opacity: .7;
