@@ -12,7 +12,7 @@
     // Primary
 
     --Cyan: hsl(179, 62%, 43%);
-    --Light-Cyan: hsl(179, 56%, 64%);
+    --Light-Cyan: hsl(179, 41%, 54%);
     --Bright-Yellow: hsl(71, 73%, 54%);
 
     // Neutral
@@ -32,10 +32,12 @@ body {
 main {
     display: grid;
     margin: auto;
-    width: 50%;
+    width: 45%;
     position: relative;
     top: 50%;
     transform: translate(0 ,-50%);
+    box-shadow: 0px 8px 8px -4px grey;
+    border-radius: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
@@ -46,20 +48,21 @@ main {
         background-color: white;
         grid-area: join;
         padding: 2.5rem;
+        border-radius: 10px 10px 0 0;
 
         .join__header {
             color: var(--Cyan);
+            font-size: 1.8em;
         }
         
         .join__subheader {
             color: var(--Bright-Yellow);
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
         .join__desc {
-            opacity: .7
-            ;
-            line-height: 1.5;
+            opacity: .7;
+            line-height: 1.8;
             margin-top: 1rem;
         }
     }
@@ -69,6 +72,10 @@ main {
         grid-area: subs;
         padding: 2.5rem;
         color: white;
+        border-radius: 0 0 0 10px;
+
+        .subs__header {
+        }
 
         .subs__price {
             font-size: 2em;
@@ -107,10 +114,7 @@ main {
         grid-area: why;
         padding: 2.5rem;
         color: white;
-
-        .why__header {
-
-        }
+        border-radius: 0 0 10px 0;
 
         .why__desc {
             opacity: .7;
@@ -120,4 +124,37 @@ main {
         }
 
     }
+}
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        padding: 2rem;
+    }
+
+    main {
+        position: unset;
+        transform: unset;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .6fr .6fr;
+        grid-template-areas: 
+                "join"
+                "subs"
+                "why";
+        grid
+        
+        .content__join {
+            grid-area: join;
+        }
+
+        .content__subs {
+            grid-area: subs;
+        }
+
+        .content__why {
+            grid-area: why;
+        }
+    }
+
 }
