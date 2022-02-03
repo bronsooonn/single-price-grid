@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+:root {
+
+    // Primary
+
+    --Cyan: hsl(179, 62%, 43%);
+    --Light-Cyan: hsl(179, 56%, 64%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+
+    // Neutral
+
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--Light-Gray);
+    height: 100vh;
+    width: 100%;
+}
+
+main {
+    display: grid;
+    margin: auto;
+    width: 50%;
+    position: relative;
+    top: 50%;
+    transform: translate(0 ,-50%);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+            "join join"
+            "subs why";
+
+    .content__join {
+        background-color: white;
+        grid-area: join;
+        padding: 2.5rem;
+
+        .join__header {
+            color: var(--Cyan);
+        }
+        
+        .join__subheader {
+            color: var(--Bright-Yellow);
+            margin-top: 1rem;
+        }
+
+        .join__desc {
+            opacity: .7
+            ;
+            line-height: 1.5;
+            margin-top: 1rem;
+        }
+    }
+
+    .content__subs {
+        background-color: var(--Cyan);
+        grid-area: subs;
+        padding: 2.5rem;
+        color: white;
+
+        .subs__price {
+            font-size: 2em;
+            font-weight: 700;
+            margin-top: 1rem;
+
+            &__span {
+                font-size: .5em;
+                opacity: .5;
+                font-weight: 400;
+            }
+        }
+
+        .subs__desc {
+            opacity: .7;
+            margin-top: .5rem;
+        }
+
+        .subs__btn {
+            background-color: var(--Bright-Yellow);
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            border-radius: 5px;
+            box-shadow: 0 8px 8px -4px grey;
+        }
+    }
+
+    .content__why {
+        background-color: var(--Light-Cyan);
+        grid-area: why;
+        padding: 2.5rem;
+        color: white;
+
+        .why__header {
+
+        }
+
+        .why__desc {
+            opacity: .7;
+            margin-top: 1rem;
+            font-size: 1em;
+            line-height: 1.3;
+        }
+
+    }
+}
